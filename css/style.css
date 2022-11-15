@@ -1,0 +1,343 @@
+html {
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+    scroll-behavior: smooth;
+    --desatured-dark-cyan-color: #5ba4a4;
+    --background-color: #effafa;
+    --filter-tablets-color: #eef6f6;
+    --dark-grayish-cyan: #7b8e8e;
+    --very-dark-grayish-cyan: #2c3a3a;
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    /* list-style: none; */
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--background-color);
+}
+
+img,
+video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.header {
+    background-color: var(--desatured-dark-cyan-color);
+}
+
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 90%;
+    padding: 1rem;
+    opacity: 0;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem 0.2rem #00000020;
+    transform: translate(0, -25%);
+    transition: all 2s ease-in-out;
+}
+
+.filter__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.filter__tag {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--filter-tablets-color);
+    border-radius: 0.5rem;
+}
+
+.filter__tag__name {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--desatured-dark-cyan-color);
+}
+
+.filter__remove {
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0.5rem;
+    background-color: var(--desatured-dark-cyan-color);
+}
+
+.filter__image__remove {
+    z-index: 9;
+    width: 100%;
+}
+
+.filter__clear {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--desatured-dark-cyan-color);
+    border: none;
+    background-color: transparent;
+}
+
+.jobs {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 90%;
+    padding: 2rem 0rem;
+}
+
+.job {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 10% 1rem 1rem 1rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem 0.2rem #00000020;
+    opacity: 1;
+    visibility: visible;
+    transition: all 1s ease-in-out;
+}
+
+.job__logo {
+    position: absolute;
+    top: 0;
+    width: 15%;
+    transform: translate(0, -50%);
+}
+
+.job__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.job__info__top {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.job__company {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--desatured-dark-cyan-color);
+}
+
+.job__labels {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.job--hidden {
+    opacity: 0;
+    order: 1;
+}
+
+.new,
+.featured {
+    padding: 0.45rem 0.6rem;
+    padding-top: 0.6rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--filter-tablets-color);
+    background-color: var(--desatured-dark-cyan-color);
+    border-radius: 0.8rem;
+}
+
+.featured {
+    background-color: var(--very-dark-grayish-cyan);
+}
+
+.border__new__featured {
+    border-left: thick solid var(--desatured-dark-cyan-color);
+}
+
+.job__position {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--very-dark-grayish-cyan);
+}
+
+.job__info__bottom {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: var(--dark-grayish-cyan);
+}
+
+.job__contract {
+    margin-left: 1rem;
+}
+
+.job__contract,
+.job__location {
+    position: relative;
+    padding: 0 1rem;
+}
+
+.job__contract::before,
+.job__location::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: inline;
+    width: 0.3rem;
+    height: 0.3rem;
+    background-color: var(--dark-grayish-cyan);
+    border-radius: 50%;
+    transform: translate(0, -50%);
+}
+
+.job__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: thin solid var(--dark-grayish-cyan);
+}
+
+.job__tag {
+    padding: 0.65rem;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: var(--filter-tablets-color);
+    color: var(--desatured-dark-cyan-color);
+    border: none;
+    border-radius: 0.25rem;
+}
+
+@media screen and (min-width:37.5em) {
+
+    /* Hover */
+    .filter__remove:hover {
+        cursor: pointer;
+        background-color: var(--very-dark-grayish-cyan);
+    }
+
+    .filter__clear:hover {
+        cursor: pointer;
+        position: relative;
+    }
+
+    .filter__clear:hover::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0.15vh;
+        background-color: var(--desatured-dark-cyan-color);
+        bottom: 0;
+    }
+
+    .job__position:hover{
+        cursor: pointer;
+        color: var(--desatured-dark-cyan-color);
+    }
+
+    .job__tag:hover{
+        cursor: pointer;
+        color: var(--filter-tablets-color);
+        background-color: var(--desatured-dark-cyan-color);
+    }
+    /* Hover */
+
+    .filter {
+        width: 80%;
+        padding: 2rem;
+    }
+
+    .jobs {
+        width: 80%;
+    }
+
+    .job {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .job__left {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .job__logo {
+        position: static;
+        transform: none;
+    }
+
+    .job__tags {
+        border: none;
+    }
+
+    .job__info {
+        gap: 1rem;
+    }
+
+    .job__info__top {
+        gap: 1rem;
+    }
+
+    .job__company {
+        font-size: 1rem;
+    }
+
+    .new,
+    .featured {
+        padding: 0.4rem 0.5rem;
+        padding-top: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .job__tag {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+}

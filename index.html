@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Frontend Mentor | Job Listings</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+
+<body>
+  <header class="header">
+    <picture>
+      <source srcset="images/bg-header-desktop.svg" media="(min-width: 600px)">
+      <img src="images/bg-header-mobile.svg" aria-hidden="true" alt="">
+    </picture>
+  </header>
+  <main class="main">
+    <div class="filter">
+      <div class="filter__tags">
+      </div>
+      <button class="filter__clear">
+        Clear
+      </button>
+    </div>
+    <section class="jobs">
+    </section>
+  </main>
+ 
+  <template class="template-filter">
+    <div class="filter__tag">
+      <p class="filter__tag__name">
+      </p>
+      <div class="filter__remove">
+        <img src="images/icon-remove.svg" alt="Icon remove" class="filter__image__remove">
+      </div>
+    </div>
+  </template>
+
+  <template class="template-job">
+    <article class="job border__new__featured">
+     <div class="job__left">
+      <div class="job__logo">
+        <img alt="Logo of the company" class="job__image">
+      </div>
+      <div class="job__info">
+        <div class="job__info__top">
+          <p class="job__company">
+            <!-- Photosnap -->
+          </p>
+          <div class="job__labels">
+            <span class="new">New!</span>
+            <span class="featured">Featured</span>
+          </div>
+        </div>
+        <div class="job__info__medium">
+          <p class="job__position">
+            <!-- Senior Frontend Developer -->
+          </p>
+        </div>
+        <div class="job__info__bottom">
+          <p class="job__date">
+            <!-- 1d ago -->
+          </p>
+          <p class="job__contract">
+            <!-- Full Time -->
+          </p>
+          <p class="job__location">
+            <!-- USA only -->
+          </p>
+        </div>
+      </div>
+     </div>
+     <div class="job__right">
+      <div class="job__tags">    
+      </div>
+     </div>
+      
+      
+    </article>
+  </template>
+  <template class="button-tag">
+    <button class="job__tag">
+      <!-- Frontend -->
+    </button>
+  </template>
+  <template class="template-tags">
+    <div class="job__tags">
+    </div>
+  </template>
+
+  <script src="js/main.js" type="module"></script>
+</body>
+
+</html>
